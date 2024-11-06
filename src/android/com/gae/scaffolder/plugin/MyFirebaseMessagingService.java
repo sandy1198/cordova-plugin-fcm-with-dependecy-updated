@@ -23,7 +23,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
           Log.d(TAG, "Marketo New token: " + token);
         Marketo marketoSdk = Marketo.getInstance(this.getApplicationContext());
         marketoSdk.setPushNotificationToken(token);
-         Log.d(TAG, "Marketo New token: " + token);
+         Log.d(TAG, "Marketo setPushNotificationToken done: ");
         // FCMPlugin.sendTokenRefresh(token);
     }
 
