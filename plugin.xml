@@ -86,10 +86,10 @@
 			<feature name="FCMPlugin">
 				<param name="ios-package" value="FCMPlugin"/>
 			</feature>
-		</config-file>
+		</config-file> -->
 
 		<!-- ENABLE PUSH CAPABILITY -->
-		<config-file parent="aps-environment" target="*/Entitlements-Debug.plist">
+		<!-- <config-file parent="aps-environment" target="*/Entitlements-Debug.plist">
 			<string>development</string>
 		</config-file>
 		<config-file parent="aps-environment" target="*/Entitlements-Release.plist">
