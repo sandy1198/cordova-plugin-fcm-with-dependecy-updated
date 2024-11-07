@@ -205,7 +205,7 @@ public class FCMPlugin extends CordovaPlugin {
                     Log.i(TAG, "\tToken: " + newToken);
                      Marketo marketoSdk = Marketo.getInstance(this.getApplicationContext());
                      marketoSdk.setPushNotificationToken(newToken);
-                       Log.i(TAG, "\tmarketoSdk Token set at FCM plgin JAVA: " + );
+                       Log.i(TAG, "\tmarketoSdk Token set at FCM plgin JAVA"  );
                     callback.success(newToken);
                 }
             });
