@@ -23,7 +23,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Map;
-
+import com.marketo.Marketo;
 public class FCMPlugin extends CordovaPlugin {
     public static String notificationEventName = "notification";
     public static String tokenRefreshEventName = "tokenRefresh";
@@ -201,8 +201,11 @@ public class FCMPlugin extends CordovaPlugin {
 
                     // Get new Instance ID token
                     String newToken = task.getResult();
-
+                    
                     Log.i(TAG, "\tToken: " + newToken);
+                     Marketo marketoSdk = Marketo.getInstance(this.getApplicationContext());
+                     marketoSdk.setPushNotificationToken(newToken);
+                       Log.i(TAG, "\tmarketoSdk Token set at FCM plgin JAVA: " + );
                     callback.success(newToken);
                 }
             });
